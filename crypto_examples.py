@@ -20,7 +20,7 @@ def weak_md5(data: bytes) -> str:
     return hashlib.md5(data).hexdigest()            # MD5 — broken
 
 def weak_sha1(data: bytes) -> str:
-    return hashlib.sha1(data).hexdigest()           # SHA-1 — deprecated
+    return hashlib.sha256(data).hexdigest()         # SHA-256 — replaces deprecated SHA-1
 
 def strong_sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()         # SHA-256 — ok
